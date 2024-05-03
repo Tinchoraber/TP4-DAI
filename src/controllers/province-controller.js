@@ -9,6 +9,17 @@ const svc = new ProvinceService(); // Instanciación del service.
 
 function ProvinceRouter() 
 {
+    router.get('', async (req, res) => {
+        let respuesta;
+        const returnArray = await svc.getAllAsync();
+        if (returnArray != null){
+        respuesta = res.status(200).json(returnArray);
+        } else {
+        respuesta = res.status(500).send(`Error interno.`);
+        }
+        return respuesta;
+       });
+       
     router.get('/api/provinces', async (req, res) => {
         const returnArray = await svc.getAllAsync();
         if (returnArray != null){
