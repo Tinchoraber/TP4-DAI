@@ -1,6 +1,6 @@
 class ValidacionesHelper {
     getIntegerOrDefault = (value, defaultValue) => {
-        return parseInt(value)||defaultValue
+        return parseInt(value) || defaultValue
     };
     /**
     * Este método recibe un 'value', en el caso de que sea undefined o null
@@ -19,6 +19,6 @@ class ValidacionesHelper {
     getStringOrDefault = (value, defaultValue) => {
         return value || defaultValue;
     };
-    }
-    // Exporto todo lo que yo quiero exponer del módulo:
-    export default new ValidacionesHelper();
+}
+// Exporto todo lo que yo quiero exponer del módulo:
+export default new ValidacionesHelper();
